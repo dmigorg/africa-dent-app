@@ -174,6 +174,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
+                        autoComplete="name"
                         className="w-full min-w-0 border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm rounded-xl border-slate-200 focus:border-sky-400 focus:ring-sky-400 h-12"
                         placeholder="Иван Иванов"
                       />
@@ -193,6 +194,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
+                        autoComplete="tel"
                         className="w-full min-w-0 border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm rounded-xl border-slate-200 focus:border-sky-400 focus:ring-sky-400 h-12"
                         placeholder="8 (999) 123-45-67"
                       />
@@ -213,6 +215,7 @@ const Contact = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+                        autoComplete="email"
                         className="w-full min-w-0 border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm rounded-xl border-slate-200 focus:border-sky-400 focus:ring-sky-400 h-12"
                         placeholder="example@mail.ru"
                       />
