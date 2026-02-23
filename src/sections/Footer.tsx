@@ -6,8 +6,11 @@ import {
   PhoneIcon,
   YouTubeIcon,
 } from '../components/icons';
+import { getPageData } from '../hooks/usePageData';
 
 const Footer = () => {
+  const pageData = getPageData();
+
   const scrollTo = (href: string) => {
     if (href.startsWith('#')) {
       document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
@@ -142,26 +145,26 @@ const Footer = () => {
                 <PhoneIcon className="w-5 h-5 text-sky-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <a
-                    href="tel:88352370255"
+                    href={`tel:${pageData.phone.replace(/\D/g, '')}`}
                     className="text-white hover:text-sky-400 transition-colors"
                   >
-                    8 (8352) 37-02-55
+                    {pageData.phone}
                   </a>
-                  <p className="text-xs text-slate-500 mt-1">Без выходных с 8:00 до 20:00</p>
+                  <p className="text-xs text-slate-500 mt-1">{pageData.workingHours}</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MailIcon className="w-5 h-5 text-sky-400 mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:info@vafrike21.ru"
+                  href={`mailto:${pageData.email}`}
                   className="text-white hover:text-sky-400 transition-colors"
                 >
-                  info@vafrike21.ru
+                  {pageData.email}
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPinIcon className="w-5 h-5 text-sky-400 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-400 text-sm">г. Чебоксары, ул. Ю. Гагарина, 35 Б</span>
+                <span className="text-slate-400 text-sm">{pageData.address}</span>
               </li>
             </ul>
           </div>

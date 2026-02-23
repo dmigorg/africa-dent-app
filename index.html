@@ -13,6 +13,29 @@
   </head>
   <body>
     <div id="root"></div>
+    <!--
+      <script>
+          window.pageData = {
+            phone: '[[!getTV? &tv=`phone`]]',
+            email: '[[!getTV? &tv=`email`]]',
+            address: '[[!getTV? &tv=`address`]]',
+            workingHours: '[[!getTV? &tv=`workingHours`]]',
+            mapId: '[[!getTV? &tv=`mapId`]]',
+            formEndpoint: '[[!getTV? &tv=`formEndpoint`]]'
+          };
+      </script>
+    -->
+    <script>
+        window.pageData = {
+          phone: '8 (8352) 37-02-55',
+          email: 'info@vafrike21.ru',
+          address: 'г. Чебоксары, ул. Ю. Гагарина, 35 Б',
+          workingHours: 'Без выходных с 8:00 до 20:00',
+          mapId: 'aa567ea711568a2ef0eef5aab4c500db4f3db5454af4bccb5771e76516d236eb',
+          formEndpoint: '/assets/snippets/formsubmit.php',
+        };
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { LogoIcon, MenuIcon, PhoneIcon } from '../components/icons';
+import { getPageData } from '../hooks/usePageData';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pageData = getPageData();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,10 +74,11 @@ const Navigation = () => {
 
             <div className="hidden lg:flex items-center gap-4">
               <a
-                href="tel:88352370255"
+                href={`tel:${pageData.phone.replace(/\D/g, '')}`}
                 className="flex items-center gap-2 font-medium transition-colors text-slate-700 hover:text-sky-600"
               >
-                <PhoneIcon className="w-4 h-4" />8 (8352) 37-02-55
+                <PhoneIcon className="w-4 h-4" />
+                {pageData.phone}
               </a>
               <button
                 onClick={() => scrollTo('contact')}
@@ -134,11 +137,11 @@ const Navigation = () => {
             </div>
             <div className="mt-8 pt-8 border-t border-slate-100">
               <a
-                href="tel:88352370255"
+                href={`tel:${pageData.phone.replace(/\D/g, '')}`}
                 className="flex items-center gap-3 py-3 px-4 rounded-xl text-slate-700 hover:bg-sky-50 transition-colors"
               >
                 <PhoneIcon className="w-5 h-5 text-sky-600" />
-                <span className="font-medium">8 (8352) 37-02-55</span>
+                <span className="font-medium">{pageData.phone}</span>
               </a>
               <button
                 onClick={() => scrollTo('contact')}

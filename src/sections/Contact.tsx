@@ -12,6 +12,7 @@ import {
   SendIcon,
   UserIcon,
 } from '../components/icons';
+import { getPageData } from '../hooks/usePageData';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,6 +26,7 @@ const Contact = () => {
     message: '',
   });
   const contactRef = useRef<HTMLDivElement>(null);
+  const pageData = getPageData();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,9 +47,24 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+
+    try {
+      const response = await fetch(pageData.formEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -83,7 +100,7 @@ const Contact = () => {
           >
             <div className="space-y-6">
               <a
-                href="tel:88352370255"
+                href={`tel:${pageData.phone.replace(/\D/g, '')}`}
                 className="flex items-start gap-4 p-4 rounded-2xl hover:bg-sky-50 transition-colors group"
               >
                 <div className="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center group-hover:bg-sky-200 transition-colors">
@@ -92,12 +109,12 @@ const Contact = () => {
                 <div>
                   <div className="text-sm text-slate-500 mb-1">Телефон</div>
                   <div className="font-semibold text-slate-800 group-hover:text-sky-600 transition-colors">
-                    8 (8352) 37-02-55
+                    {pageData.phone}
                   </div>
                 </div>
               </a>
               <a
-                href="mailto:info@vafrike21.ru"
+                href={`mailto:${pageData.email}`}
                 className="flex items-start gap-4 p-4 rounded-2xl hover:bg-sky-50 transition-colors group"
               >
                 <div className="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center group-hover:bg-sky-200 transition-colors">
@@ -106,7 +123,7 @@ const Contact = () => {
                 <div>
                   <div className="text-sm text-slate-500 mb-1">Электронная почта</div>
                   <div className="font-semibold text-slate-800 group-hover:text-sky-600 transition-colors">
-                    info@vafrike21.ru
+                    {pageData.email}
                   </div>
                 </div>
               </a>
@@ -120,7 +137,7 @@ const Contact = () => {
                 <div>
                   <div className="text-sm text-slate-500 mb-1">Адрес</div>
                   <div className="font-semibold text-slate-800 group-hover:text-sky-600 transition-colors">
-                    г. Чебоксары, ул. Ю. Гагарина, 35 Б
+                    {pageData.address}
                   </div>
                 </div>
               </a>
@@ -134,12 +151,12 @@ const Contact = () => {
                 <div>
                   <div className="text-sm text-slate-500 mb-1">Режим работы</div>
                   <div className="font-semibold text-slate-800 group-hover:text-sky-600 transition-colors">
-                    Без выходных с 8:00 до 20:00
+                    {pageData.workingHours}
                   </div>
                 </div>
               </a>
             </div>
-            <YandexMap id="aa567ea711568a2ef0eef5aab4c500db4f3db5454af4bccb5771e76516d236eb" />
+            <YandexMap id={pageData.mapId} />
           </div>
 
           <div
