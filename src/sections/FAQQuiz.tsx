@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { questions, moreQuestions } from '../data/faqQuiz';
-import { XIcon, ArrowRightIcon, LightbulbIcon, CheckCircleIcon } from '../components/icons';
+import { XIcon, ArrowRightIcon, LightbulbIcon, CheckCircleIcon, QuestionMarkIcon } from '../components/icons';
 
 const FAQQuiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -37,9 +37,9 @@ const FAQQuiz = () => {
     <section id="faq" className="py-24 bg-gradient-to-br from-sky-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-100 text-sky-700 font-semibold text-sm mb-6">
-            <span className="w-2 h-2 rounded-full bg-sky-500" />
-            Викторина
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 font-semibold text-sm mb-6">
+            <QuestionMarkIcon className="w-4 h-4" />
+            Интерактивная викторина
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
             Узнайте больше о <span className="text-sky-600">лечении под наркозом</span>

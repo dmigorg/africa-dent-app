@@ -20,6 +20,7 @@ export { MapPinIcon } from './MapPinIcon';
 export { MenuIcon } from './MenuIcon';
 export { MessageSquareIcon } from './MessageSquareIcon';
 export { PhoneIcon } from './PhoneIcon';
+export { QuestionMarkIcon } from './QuestionMarkIcon';
 export { SendIcon } from './SendIcon';
 export { ShieldIcon } from './ShieldIcon';
 export { SparklesIcon } from './ProcessIcons';
