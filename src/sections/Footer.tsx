@@ -1,10 +1,10 @@
 import {
-  InstagramIcon,
   FacebookIcon,
-  YouTubeIcon,
-  PhoneIcon,
+  InstagramIcon,
   MailIcon,
   MapPinIcon,
+  PhoneIcon,
+  YouTubeIcon,
 } from '../components/icons';
 
 const Footer = () => {

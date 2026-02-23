@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CheckCircleIcon } from '../components/icons';
 import { services } from '../data/services';
 

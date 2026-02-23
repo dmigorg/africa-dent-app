@@ -1,5 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
-import { CheckCircleIcon, DocumentIcon, StethoscopeIcon, HeartPulseIcon, SparklesIcon, HomeIcon, ArrowRightIcon } from '../components/icons';
+import { useEffect, useRef, useState } from 'react';
+import {
+  ArrowRightIcon,
+  CheckCircleIcon,
+  DocumentIcon,
+  HeartPulseIcon,
+  HomeIcon,
+  SparklesIcon,
+  StethoscopeIcon,
+} from '../components/icons';
 
 const steps = [
   {

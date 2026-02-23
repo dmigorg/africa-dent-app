@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { CheckCircleIcon, ClockIcon, UsersIcon, LightbulbIcon } from '../components/icons';
+import { useEffect, useRef, useState } from 'react';
+import { CheckCircleIcon, ClockIcon, LightbulbIcon, UsersIcon } from '../components/icons';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);

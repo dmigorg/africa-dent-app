@@ -1,11 +1,11 @@
-import Navigation from './sections/Navigation';
-import Hero from './sections/Hero';
 import About from './sections/About';
-import Services from './sections/Services';
-import Process from './sections/Process';
-import FAQQuiz from './sections/FAQQuiz';
 import Contact from './sections/Contact';
+import FAQQuiz from './sections/FAQQuiz';
 import Footer from './sections/Footer';
+import Hero from './sections/Hero';
+import Navigation from './sections/Navigation';
+import Process from './sections/Process';
+import Services from './sections/Services';
 
 function App() {
   return (

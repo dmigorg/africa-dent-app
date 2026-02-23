@@ -1,15 +1,16 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import YandexMap from '../components/YandexMap';
 import {
   CalendarIcon,
-  PhoneIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  EmailIcon,
   MailIcon,
   MapPinIcon,
-  ClockIcon,
-  UserIcon,
   MessageSquareIcon,
+  PhoneIcon,
   SendIcon,
-  CheckCircleIcon,
-  EmailIcon,
+  UserIcon,
 } from '../components/icons';
 
 const Contact = () => {
@@ -138,15 +139,7 @@ const Contact = () => {
                 </div>
               </a>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaa567ea711568a2ef0eef5aab4c500db4f3db5454af4bccb5771e76516d236eb&amp;source=constructor"
-                width="100%"
-                height="300"
-                frameBorder="0"
-                title="Карта проезда"
-              />
-            </div>
+            <YandexMap id="aa567ea711568a2ef0eef5aab4c500db4f3db5454af4bccb5771e76516d236eb" />
           </div>
 
           <div

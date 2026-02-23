@@ -1,14 +1,14 @@
 import { useRef } from 'react';
-import HeroCanvas from './HeroCanvas';
 import {
   CalendarIcon,
   ChevronDownIcon,
-  PhoneIcon,
-  ShieldIcon,
   HeartIcon,
   LightbulbIcon,
+  PhoneIcon,
+  ShieldIcon,
   StarIcon,
 } from '../components/icons';
+import HeroCanvas from './HeroCanvas';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -39,9 +39,7 @@ const Hero = () => {
           style={{ animationDelay: '0.5s' }}
         />
 
-        <StarIcon
-          className="absolute top-32 left-[15%] w-8 h-8 text-sky-300/50 animate-bounce-soft"
-        />
+        <StarIcon className="absolute top-32 left-[15%] w-8 h-8 text-sky-300/50 animate-bounce-soft" />
 
         <div
           className="absolute bottom-32 right-[20%] w-10 h-10 text-yellow-300/40 animate-bounce-soft"

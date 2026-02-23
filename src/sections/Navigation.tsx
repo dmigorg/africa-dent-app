@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { LogoIcon, PhoneIcon, MenuIcon} from '../components/icons';
+import { useEffect, useState } from 'react';
+import { LogoIcon, MenuIcon, PhoneIcon } from '../components/icons';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,8 +75,7 @@ const Navigation = () => {
                 href="tel:88352370255"
                 className="flex items-center gap-2 font-medium transition-colors text-slate-700 hover:text-sky-600"
               >
-                <PhoneIcon className="w-4 h-4" />
-                8 (8352) 37-02-55
+                <PhoneIcon className="w-4 h-4" />8 (8352) 37-02-55
               </a>
               <button
                 onClick={() => scrollTo('contact')}

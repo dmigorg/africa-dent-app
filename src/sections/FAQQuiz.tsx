@@ -1,6 +1,12 @@
 import { useState } from 'react';
-import { questions, moreQuestions } from '../data/faqQuiz';
-import { XIcon, ArrowRightIcon, LightbulbIcon, CheckCircleIcon, QuestionMarkIcon } from '../components/icons';
+import {
+  ArrowRightIcon,
+  CheckCircleIcon,
+  LightbulbIcon,
+  QuestionMarkIcon,
+  XIcon,
+} from '../components/icons';
+import { moreQuestions, questions } from '../data/faqQuiz';
 
 const FAQQuiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
