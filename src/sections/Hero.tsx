@@ -2,9 +2,9 @@ import { useRef } from 'react';
 import {
   CalendarIcon,
   ChevronDownIcon,
+  GiftIcon,
   HeartIcon,
   LightbulbIcon,
-  PhoneIcon,
   ShieldIcon,
   StarIcon,
 } from '../components/icons';
@@ -64,7 +64,7 @@ const Hero = () => {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-800 leading-tight">
                   Лечение зубов{' '}
                   <span className="relative inline-block">
-                    <span className="relative z-10 text-sky-600">под наркозом</span>
+                    <span className="relative z-10 text-sky-600">во сне</span>
                     <svg
                       className="absolute -bottom-2 left-0 w-full h-3 text-yellow-300 -z-0"
                       viewBox="0 0 200 12"
@@ -82,8 +82,8 @@ const Hero = () => {
                   для детей
                 </h1>
                 <p className="text-lg sm:text-xl text-slate-600 max-w-xl leading-relaxed">
-                  Безболезненное и безопасное лечение детей для самых маленьких. Современное
-                  оборудование, опытные врачи-анестезиологи и забота о вашем ребёнке.
+                  Безболезненное и безопасное лечение детей и взрослых. Современное оборудование,
+                  опытные врачи-анестезиологи и забота о Вас и вашем ребёнке.
                 </p>
               </div>
 
@@ -101,19 +101,17 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={scrollToContact}
-                  className="inline-flex items-center justify-center gap-1 text-lg font-bold px-8 gradient-primary text-white rounded-2xl shadow-glow hover:shadow-lg hover:scale-105 transition-all duration-300"
-                  style={{ paddingTop: '3px', paddingBottom: '3px' }}
+                  className="inline-flex items-center justify-center gap-2 text-lg font-bold px-6 py-3 whitespace-nowrap gradient-primary text-white rounded-2xl shadow-glow hover:shadow-lg hover:scale-105 transition-all duration-300"
                 >
                   <CalendarIcon className="w-5 h-5" />
                   Записаться на консультацию
                 </button>
                 <button
                   onClick={scrollToContact}
-                  className="inline-flex items-center justify-center gap-1 text-lg font-bold px-8 border-2 border-sky-400 text-sky-700 rounded-2xl hover:bg-sky-50 transition-all duration-300"
-                  style={{ paddingTop: '3px', paddingBottom: '3px' }}
+                  className="inline-flex items-center justify-center gap-2 text-lg font-bold px-6 py-3 whitespace-nowrap border-2 border-amber-400 bg-amber-50 text-amber-700 rounded-2xl hover:bg-amber-100 hover:scale-105 shadow-md transition-all duration-300"
                 >
-                  <PhoneIcon className="w-5 h-5" />
-                  Получить скидку на лечение
+                  <GiftIcon className="w-6 h-6" />
+                  Получить скидку
                 </button>
               </div>
 
@@ -123,7 +121,7 @@ const Hero = () => {
                   <div className="text-sm text-slate-500">Пациенты всех возрастов</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-sky-600">15000+</div>
+                  <div className="text-3xl font-bold text-sky-600">1500</div>
                   <div className="text-sm text-slate-500">пролеченных детей</div>
                 </div>
                 <div className="text-center">

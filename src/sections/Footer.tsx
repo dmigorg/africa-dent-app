@@ -180,7 +180,7 @@ const Footer = () => {
                 Лицензии
               </button>
             </div>
-            <p className="text-slate-500 text-sm flex items-center gap-1">Сделано для детей</p>
+            <p className="text-slate-500 text-sm flex items-center gap-1">Сделано для людей</p>
           </div>
         </div>
       </div>
