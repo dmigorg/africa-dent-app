@@ -37,7 +37,7 @@ const Navigation = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               <div className="h-10 flex items-center justify-center transition-all duration-300">
-                <img src="/logo.png" alt="В Африке" className="h-full w-auto object-contain" />
+                <img src="./logo.png" alt="В Африке" className="h-full w-auto object-contain" />
               </div>
             </button>
 
