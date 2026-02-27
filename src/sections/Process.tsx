@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import {
-  ArrowRightIcon,
   CheckCircleIcon,
   DocumentIcon,
   HeartPulseIcon,
   HomeIcon,
+  LightbulbIcon,
+  ShieldIcon,
   SparklesIcon,
   StethoscopeIcon,
 } from '../components/icons';
@@ -48,6 +49,22 @@ const steps = [
       'Ребёнок просыпается в течение 10-15 минут и остается в комнате восстановления под наблюдением врача. Через 1 час можно ехать домой.',
     color: 'rose',
     icon: <HomeIcon className="w-8 h-8 text-white" />,
+  },
+  {
+    number: '06',
+    title: 'Академия доктора Зекимы',
+    description:
+      'Формируем гигиенические навыки по уходу за полостью рта, переходящие в стойкую привычку.',
+    color: 'indigo',
+    icon: <LightbulbIcon className="w-8 h-8 text-white" />,
+  },
+  {
+    number: '07',
+    title: 'Профосмотры',
+    description:
+      'Регулярно посещаем профосмотры, тем самым сохраняем долгосрочный результат лечения и предотвращаем развитие вторичного кариеса. Профилактика гораздо эффективнее лечения!',
+    color: 'emerald',
+    icon: <ShieldIcon className="w-8 h-8 text-white" />,
   },
 ];
 
@@ -93,6 +110,16 @@ const Process = () => {
       gradient: 'from-rose-400 to-rose-500',
       border: 'hover:border-sky-200',
     },
+    indigo: {
+      bg: 'bg-indigo-50',
+      gradient: 'from-indigo-400 to-indigo-500',
+      border: 'hover:border-indigo-200',
+    },
+    emerald: {
+      bg: 'bg-emerald-50',
+      gradient: 'from-emerald-400 to-emerald-500',
+      border: 'hover:border-emerald-200',
+    },
   };
 
   return (
@@ -122,13 +149,11 @@ const Process = () => {
         </div>
 
         <div className="relative">
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-sky-200 via-teal-200 to-rose-200 rounded-full" />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="flex flex-wrap justify-center gap-6">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                className={`relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div
@@ -147,11 +172,6 @@ const Process = () => {
                   <h3 className="font-bold text-slate-800 text-lg mb-3">{step.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed">{step.description}</p>
                 </div>
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:flex absolute top-24 -right-4 w-8 h-8 bg-white rounded-full shadow-md items-center justify-center z-10">
-                    <ArrowRightIcon className="w-4 h-4 text-sky-400" />
-                  </div>
-                )}
               </div>
             ))}
           </div>
