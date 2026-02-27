@@ -14,6 +14,10 @@
       "suspicious": {
         "noArrayIndexKey": "off"
       },
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error"
+      },
       "style": {
         "useImportType": "off",
         "noNonNullAssertion": "off",

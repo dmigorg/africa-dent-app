@@ -31,3 +31,5 @@ export { UsersIcon } from './UsersIcon';
 export { XIcon } from './XIcon';
 export { YouTubeIcon } from './YouTubeIcon';
 export { ArrowLeftIcon } from './ProcessIcons';
+export { GiftIcon } from './GiftIcon';
+export { RefreshCwIcon } from './RefreshCwIcon';

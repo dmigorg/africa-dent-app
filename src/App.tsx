@@ -1,5 +1,6 @@
 import About from './sections/About';
 import Contact from './sections/Contact';
+import FAQAdditional from './sections/FAQAdditional';
 import FAQQuiz from './sections/FAQQuiz';
 import Footer from './sections/Footer';
 import Hero from './sections/Hero';
@@ -17,6 +18,7 @@ function App() {
         <Services />
         <Process />
         <FAQQuiz />
+        <FAQAdditional />
         <Contact />
       </main>
       <Footer />
