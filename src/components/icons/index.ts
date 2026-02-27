@@ -14,7 +14,6 @@ export { HeartPulseIcon } from './ProcessIcons';
 export { HomeIcon } from './ProcessIcons';
 export { InstagramIcon } from './InstagramIcon';
 export { LightbulbIcon } from './LightbulbIcon';
-export { LogoIcon } from './LogoIcon';
 export { MailIcon } from './MailIcon';
 export { MapPinIcon } from './MapPinIcon';
 export { MenuIcon } from './MenuIcon';

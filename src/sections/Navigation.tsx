@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { LogoIcon, MenuIcon, PhoneIcon } from '../components/icons';
+import { MenuIcon, PhoneIcon } from '../components/icons';
 import { getPageData } from '../hooks/usePageData';
 
 const Navigation = () => {
@@ -36,12 +36,8 @@ const Navigation = () => {
               className="flex items-center gap-2 group"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 bg-gradient-to-br from-sky-400 to-sky-600">
-                <LogoIcon className="w-6 h-6 text-white" />
-              </div>
-              <div className="transition-colors text-slate-800">
-                <div className="font-bold text-lg leading-tight">в Африке</div>
-                <div className="text-xs opacity-70">Стоматология для детей</div>
+              <div className="h-10 flex items-center justify-center transition-all duration-300">
+                <img src="/logo.png" alt="В Африке" className="h-full w-auto object-contain" />
               </div>
             </button>
 
@@ -52,17 +48,17 @@ const Navigation = () => {
               >
                 О клинике
               </button>
-              <button
-                onClick={() => scrollTo('about')}
+              <a
+                href="https://vafrike21.ru/vrachi/"
                 className="font-medium transition-colors hover:text-sky-600 text-slate-700"
               >
                 Врачи
-              </button>
+              </a>
               <button
                 onClick={() => scrollTo('faq')}
                 className="font-medium transition-colors hover:text-sky-600 text-slate-700"
               >
-                Акции
+                Акции и скидки
               </button>
               <button
                 onClick={() => scrollTo('contact')}

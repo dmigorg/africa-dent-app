@@ -26,14 +26,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center">
-                <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C9.5 2 7.5 3.5 7 5.5C6.5 7.5 7 9.5 7.5 11C8 12.5 8 14 7 15.5C6 17 5 18.5 5 20C5 21 5.5 22 6.5 22C7.5 22 8 21 8.5 20C9 19 9.5 18 10 17.5C10.5 17 11 17 11.5 17.5C12 18 12.5 19 13 20C13.5 21 14 22 15 22C16 22 16.5 21 16.5 20C16.5 18.5 15.5 17 14.5 15.5C13.5 14 13.5 12.5 14 11C14.5 9.5 15 7.5 14.5 5.5C14 3.5 12 2 12 2Z" />
-                </svg>
-              </div>
-              <div>
-                <div className="text-xl font-bold">в Африке</div>
-                <div className="text-xs text-slate-400">Стоматология для детей</div>
+              <div className="h-12 flex items-center justify-center">
+                <img src="/logo2.png" alt="В Африке" className="h-full w-auto object-contain" />
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -112,12 +106,12 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollTo('#about')}
+                <a
+                  href="https://vafrike21.ru/vrachi/"
                   className="text-slate-400 hover:text-sky-400 transition-colors text-sm"
                 >
                   Врачи
-                </button>
+                </a>
               </li>
               <li>
                 <button
